@@ -4,7 +4,7 @@ namespace CountryAssignment.NUnit_Tests
 {
    
     [TestFixture]
-    class TestBSTree
+    public class TestBSTree
     {
         [Test]
         public void NewBSTree()

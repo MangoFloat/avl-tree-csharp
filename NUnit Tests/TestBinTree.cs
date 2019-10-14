@@ -5,7 +5,7 @@ namespace CountryAssignment.NUnit_Tests
 {
 
     [TestFixture]
-    class TestBinTree
+    public class TestBinTree
     {
         [Test]
         public void NewBinTree()
