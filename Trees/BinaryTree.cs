@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace CountryAssignment
 {
-    public class BinTree<T> where T : IComparable
+    public class BinaryTree<T> where T : IComparable
     {
         protected Node<T> root; // Protected variable
 
-        public BinTree() // Constructor
+        public BinaryTree() // Constructor
         {
             root = null;
         }
 
-        public BinTree(Node<T> node) // Constructor
+        public BinaryTree(Node<T> node) // Constructor
         {
             root = node;
         }
@@ -69,7 +69,7 @@ namespace CountryAssignment
         }
 
         ///// Copy
-        public void Copy(BinTree<T> tree2)
+        public void Copy(BinaryTree<T> tree2)
         {
             copy(ref root, tree2.root);
         }

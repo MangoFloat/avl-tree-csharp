@@ -4,10 +4,10 @@ using System.Text;
 namespace CountryAssignment.NUnit_Tests
 {
 
-    [TestFixture]
+    [TestFixture(Author = "jaictinjune@gmail.com", Category = "Tree", Description = "Testing the AVLTree class.")]
     public class TestAVLTree
     {
-        [Test]
+        [Test(Author = "jaictinjune@gmail.com", Description = "Test the initiation of the AVL Tree.")]
         public void NewAVLTree()
         {
             AVLTree<int> tree = new AVLTree<int>();
@@ -24,7 +24,7 @@ namespace CountryAssignment.NUnit_Tests
             Assert.IsInstanceOf<AVLTree<int>>(tree);
         }
 
-        [Test]
+        [Test(Author = "jaictinjune@gmail.com", Description = "Test the rotation of the tree, checking if the orders are correct when adding/removing nodes to the tree.")]
         public void TestRotations()
         {
             AVLTree<int> tree = new AVLTree<int>();

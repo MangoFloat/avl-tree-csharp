@@ -2,14 +2,14 @@
 
 namespace CountryAssignment
 {
-   public class BSTree<T> : BinTree<T> where T : IComparable
+   public class BinarySearchTree<T> : BinaryTree<T> where T : IComparable
     {
-        public BSTree()
+        public BinarySearchTree()
         {
             root = null;
         }
 
-        public BSTree(Node<T> root)
+        public BinarySearchTree(Node<T> root)
         {
             this.root = root;
         }

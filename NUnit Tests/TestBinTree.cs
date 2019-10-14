@@ -4,10 +4,10 @@ using System.Text;
 namespace CountryAssignment.NUnit_Tests
 {
 
-    [TestFixture]
+    [TestFixture(Author = "jaictinjune@gmail.com", Category = "Tree", Description = "Testing the BinaryTree class.")]
     public class TestBinTree
     {
-        [Test]
+        [Test(Author = "jaictinjune@gmail.com", Description = "Test the initiation of the Binary Tree.")]
         public void NewBinTree()
         {
             Node<int> node1 = new Node<int>(1); //  1
@@ -29,12 +29,12 @@ namespace CountryAssignment.NUnit_Tests
             node4.Left = node8;
             node4.Right = node9;
 
-            BinTree<int> binTree = new BinTree<int>(node1);
+            BinaryTree<int> binTree = new BinaryTree<int>(node1);
 
-            Assert.IsInstanceOf<BinTree<int>>(binTree);
+            Assert.IsInstanceOf<BinaryTree<int>>(binTree);
         }
 
-        [Test]
+        [Test(Author = "jaictinjune@gmail.com", Description = "Test the traversals of the Binary Tree.")]
         public void TestTraversals()
         {
             Node<int> node1 = new Node<int>(1);
@@ -56,7 +56,7 @@ namespace CountryAssignment.NUnit_Tests
             node4.Left = node8;
             node4.Right = node9;
 
-            BinTree<int> binTree1 = new BinTree<int>(node1);
+            BinaryTree<int> binTree1 = new BinaryTree<int>(node1);
 
             StringBuilder strInOrder1 = new StringBuilder();
             string strInOrder2 = "8,4,9,2,5,1,6,3,7,";
@@ -75,7 +75,7 @@ namespace CountryAssignment.NUnit_Tests
             Assert.AreEqual(strPostOrder1.ToString(), strPostOrder2);
         }
 
-        [Test]
+        [Test(Author = "jaictinjune@gmail.com", Description = "Test the copy & count functions of the Binary Tree.")]
         public void TestCopyCount()
         {
             Node<int> node1 = new Node<int>(1);
@@ -97,8 +97,8 @@ namespace CountryAssignment.NUnit_Tests
             node4.Left = node8;
             node4.Right = node9;
 
-            BinTree<int> binTree1 = new BinTree<int>(node1);
-            BinTree<int> binTree2 = new BinTree<int>();
+            BinaryTree<int> binTree1 = new BinaryTree<int>(node1);
+            BinaryTree<int> binTree2 = new BinaryTree<int>();
 
             binTree2.Copy(binTree1);
 
@@ -113,7 +113,6 @@ namespace CountryAssignment.NUnit_Tests
             binTree2.PostOrder(ref str2);
 
             Assert.AreEqual(str1.ToString(), str2.ToString()); // Tree is same structure, therefore should be the same string.
-            //Assert.AreEqual(binTree1, binTree2); // Fails for some reason? Even though they have the same structure.
             Assert.AreEqual(binTree1.Count(), 9);
         }
     }

@@ -2,14 +2,14 @@
 
 namespace CountryAssignment.NUnit_Tests
 {
-   
-    [TestFixture]
-    public class TestBSTree
+
+    [TestFixture(Author = "jaictinjune@gmail.com", Category = "Tree", Description = "Testing the BinarySearchTree class.")]
+    public class TestBinarySearchTree
     {
-        [Test]
+        [Test(Author = "jaictinjune@gmail.com", Description = "Test the initiation of the Binary Search Tree.")]
         public void NewBSTree()
         {
-            BSTree<int> tree = new BSTree<int>();
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
             tree.InsertItem(1);
             tree.InsertItem(2);
             tree.InsertItem(3);
@@ -20,13 +20,13 @@ namespace CountryAssignment.NUnit_Tests
             tree.InsertItem(8);
             tree.InsertItem(9);
 
-            Assert.IsInstanceOf<BSTree<int>>(tree);
+            Assert.IsInstanceOf<BinarySearchTree<int>>(tree);
         }
 
-        [Test]
+        [Test(Author = "jaictinjune@gmail.com", Description = "Test the Height function in the Binary Search Tree.")]
         public void TestHeight()
         {
-            BSTree<int> tree = new BSTree<int>();
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
             tree.InsertItem(1);
             tree.InsertItem(2);
             tree.InsertItem(3);
@@ -41,10 +41,10 @@ namespace CountryAssignment.NUnit_Tests
             Assert.AreEqual(tree.Height(), 9);
         }
 
-        [Test]
+        [Test(Author = "jaictinjune@gmail.com", Description = "Test the Contains function in the Binary Search Tree.")]
         public void TestContains()
         {
-            BSTree<int> tree = new BSTree<int>();
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
             tree.InsertItem(1);
             tree.InsertItem(2);
             tree.InsertItem(3);
@@ -61,10 +61,10 @@ namespace CountryAssignment.NUnit_Tests
             Assert.AreEqual(tree.Contains(10), false);
         }
 
-        [Test]
+        [Test(Author = "jaictinjune@gmail.com", Description = "Test the Remove function in the Binary Search Tree.")]
         public void TestRemove()
         {
-            BSTree<int> tree = new BSTree<int>();
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
             tree.InsertItem(1);
             tree.InsertItem(2);
             tree.InsertItem(3);

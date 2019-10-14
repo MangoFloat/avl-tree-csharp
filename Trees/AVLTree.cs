@@ -2,7 +2,7 @@
 
 namespace CountryAssignment
 {
-    public class AVLTree<T> : BSTree<T> where T : IComparable
+    public class AVLTree<T> : BinarySearchTree<T> where T : IComparable
     {
         public AVLTree() // Constructor
         {
